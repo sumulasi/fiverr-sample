@@ -1,0 +1,109 @@
+.sp-accrodion {
+  padding: 60px 0;
+  background-image: linear-gradient(to left, var(--gray), var(--white));
+  h2 {
+    margin-bottom: 30px;
+    max-width: 750px;
+  }
+  .tab-slider {
+    display: flex;
+    &-nav {
+      padding-top: 30px;
+      max-width: 585px;
+      .slick-track {
+        width: 100% !important;
+        transform: translate3d(0, 0, 0) !important;
+      }
+      .slick-slide {
+        cursor: pointer;
+        padding-right: 70px;
+        > div {
+          display: flex;
+        }
+        .slider-wrapper {
+          position: relative;
+          padding: 5px 20px;
+          margin: 15px 0;
+          &::after,
+          &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--light-green);
+          }
+          &::after {
+            top: 50%;
+            height: 0;
+            background-color: var(--dark-green);
+            transition: all 0.5s ease-in-out;
+          }
+          h3 {
+            font-size: $h5-font-size;
+            color: var(--dark-gray);
+          }
+          p {
+            margin-bottom: 0;
+            visibility: hidden;
+            height: 0;
+          }
+          .wp-block-buttons {
+            @include link-button;
+            visibility: hidden;
+            height: 0;
+          }
+        }
+        &:hover {
+          .slider-wrapper {
+            &::after {
+              top: 0;
+              height: 100%;
+            }
+            h3 {
+              color: var(--dark-green);
+              transition: all 0.3s ease-in-out
+            }
+          }
+        }
+        &.slick-current {
+          cursor: default;
+          .slider-wrapper {
+            background-color: var(--white);
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            &::after {
+              top: 0;
+              height: 100%;
+            }
+            h3 {
+              font-size: $h4-font-size;
+              color: var(--dark-green);
+              transition: all 0.3s ease-in-out
+            }
+            p,
+            .wp-block-buttons {
+              visibility: visible;
+              height: 100%;
+              transition: all 0.3s ease-in-out
+            }
+          }
+        }
+      }
+    }
+    &-content {
+      max-width: 585px;
+      .image-inner {
+        figure {
+          margin-bottom: 0;
+          img {
+            border-radius: 8px;
+            max-height: 450px;
+          }
+        }
+      }
+    }
+  }
+}

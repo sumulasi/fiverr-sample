@@ -1,0 +1,12 @@
+/**
+ * These styles should be loaded by the Block Editor only
+ */
+@import "01-settings/fonts";
+@import "01-settings/global";
+
+@import "02-tools/mixins";
+@import "02-tools/functions";
+
+@import "03-generic/breakpoints";
+
+@import "06-components/editor";

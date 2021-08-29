@@ -1,0 +1,25 @@
+.sp-home-banner {
+  padding: 80px 0 0;
+  background-image: linear-gradient(var(--gray), var(--white));
+  h1 {
+    color: var(--dark-green);
+  }
+  .media-image,
+  .div {
+    width: 50%;
+  }
+  .div {
+    display: flex;
+    align-items: center;
+    &__inner {
+      padding-right: 100px;
+    }
+  }
+  .sp-slick-slider {
+    .slick-slide {
+      .slider-wrapper {
+        display: flex;
+      }
+    }
+  }
+}

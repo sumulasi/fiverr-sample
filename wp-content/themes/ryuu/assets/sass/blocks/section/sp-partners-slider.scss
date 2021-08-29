@@ -1,0 +1,16 @@
+.sp-partners-slider {
+  @include slick-arrows;
+  @include slick-dots;
+  padding: 40px 0 80px;
+  h2 {
+    margin-bottom: 20px;
+  }
+  .image-inner {
+    padding: 0 50px;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+  }
+}

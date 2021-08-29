@@ -1,0 +1,118 @@
+body {
+  font-weight: $font-weight-regular;
+  color: var(--dark-grey-blue);
+}
+
+@mixin heading1 {
+  line-height: 32px;
+  font-weight: $font-weight-medium;
+  font-size: $h1-mobile-font-size;
+  color: var(--black);
+  @include media-breakpoint-up(lg) {
+    line-height: 80px;
+    font-size: $h1-font-size;
+  }
+}
+@mixin heading2 {
+  line-height: 27px;
+  font-weight: $font-weight-medium;
+  font-size: $h2-mobile-font-size;
+  color: var(--black);
+  @include media-breakpoint-up(lg) {
+    line-height: 52px;
+    font-size: $h2-font-size;
+  }
+}
+@mixin heading3 {
+  line-height: 27px;
+  font-weight: $font-weight-medium;
+  font-size: $h3-mobile-font-size;
+  color: var(--black);
+  @include media-breakpoint-up(lg) {
+    line-height: 43px;
+    font-size: $h3-font-size;
+  }
+}
+@mixin heading4 {
+  line-height: 32px;
+  font-weight: $font-weight-regular;
+  font-size: $h4-font-size;
+  color: var(--black);
+}
+@mixin heading5 {
+  line-height: 27px;
+  font-weight: $font-weight-medium;
+  font-size: $h5-font-size;
+  color: var(--black);
+}
+@mixin heading6 {
+  line-height: 22px;
+  font-weight: $font-weight-medium;
+  font-size: $h6-font-size;
+  color: var(--black);
+}
+@mixin body-big {
+  line-height: 24px;
+  font-weight: $font-weight-regular;
+  font-size: $body-big-font-size;
+  color: var(--dark-grey-blue);
+}
+
+@mixin title-one {
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  color: var(--black);
+}
+
+@mixin gradient-text {
+  background-image: linear-gradient(to right, #223ccf, #00c7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin after-before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+h1 {
+  @include heading1;
+}
+h2 {
+  @include heading2;
+}
+h3 {
+  @include heading3;
+}
+h4 {
+  @include heading4;
+}
+h5 {
+  @include heading5;
+}
+h6 {
+  @include heading6;
+}
+p,
+ul li,
+ol li,
+pre {
+  line-height: 21px;
+  font-weight: $font-weight-regular;
+  font-size: $body-big-font-size;
+  color: var(--dark-grey-blue);
+}
+p a {
+  color: var(--bright-sky-blue);
+  text-decoration: none;
+}
+
+@include media-breakpoint-down(sm) {
+  p,
+  ul li,
+  ol li,
+  pre {
+    line-height: 14px;
+    font-size: $mobile-paragraph-font-size;
+  }
+}

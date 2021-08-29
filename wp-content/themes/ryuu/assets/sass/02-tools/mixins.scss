@@ -1,0 +1,70 @@
+// // Responsive breakpoints mixin
+@mixin slick-arrows {
+  .slick-slider {
+    .slick-arrow {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+      }
+      &::before {
+        z-index: 1;
+        display: inline-block;
+        top: 9px;
+        right: 7px;
+        width: 11px;
+        height: 11px;
+        transform: rotate(-135deg);
+        transition: all 0.3s ease-in-out;
+        border-right: 3px solid var(--green);
+        border-top: 3px solid var(--green);
+      }
+      &::after {
+        display: block;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--white);
+        box-shadow: 0 8px 16px 0 rgb(62 63 74 / 10%);    
+      }
+      &.slick-next {
+        &::before {
+          right: 11px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+@mixin slick-dots {
+  .slick-slider {
+    .slick-dots {
+      li {
+        &::before {
+          display: none;
+        }
+        button {
+          &::before {
+            font-size: 10px;
+            color: var(--dark-green);
+          }
+        }
+      }
+    }
+  }
+}
+@mixin link-button {
+  a {
+    margin-top: 15px;
+    padding: 0;
+    background-color: transparent;
+    color: var(--dark-green);
+  }
+  &:hover {
+    a {
+      color: var(--very-dark-green);
+    }
+  }
+}
