@@ -630,3 +630,27 @@ function twentytwentyone_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles()
+{
+    add_editor_style('/style.css');
+}
+
+//Comment because of classic views
+add_action('admin_init', 'wpdocs_theme_add_editor_styles');
+
+function hooker_plugin_category( $categories ) {
+	return array_merge(
+		$categories,
+		[
+			[
+				'slug'  => 'sp',
+				'title' => __( 'SmartPensil', 'sp' ),
+			],
+		]
+	);
+}
+add_action( 'block_categories', 'hooker_plugin_category', 10, 2 );
